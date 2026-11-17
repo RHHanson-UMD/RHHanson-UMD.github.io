@@ -2,10 +2,14 @@
 const root = document.documentElement;
 const toggle = document.getElementById('theme-toggle');
 const savedTheme = (() => { try { return localStorage.getItem('learning-lab-theme'); } catch { return null; } })();
-if (savedTheme === 'light' || savedTheme === 'dark') root.dataset.theme = savedTheme;
+root.dataset.theme = savedTheme === 'light' ? 'light' : 'dark';
 function refreshThemeButton() {
-  toggle.textContent = root.dataset.theme === 'dark' ? '\u263e' : '\u2600';
-  toggle.setAttribute('aria-label', root.dataset.theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+  const dark = root.dataset.theme === 'dark';
+  toggle.querySelector('.theme-symbol').textContent = dark ? '\u263e' : '\u2600';
+  toggle.querySelector('.theme-label').textContent = dark ? 'Dark' : 'Light';
+  toggle.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  toggle.setAttribute('title', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  toggle.setAttribute('aria-pressed', String(dark));
 }
 refreshThemeButton();
 toggle.addEventListener('click', () => {
