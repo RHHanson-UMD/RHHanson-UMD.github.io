@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quick Reference | RHHanson-UMD Learning Lab</title>
+<meta name="description" content="Practical reminders for math, coding, machine learning, and academic writing, with examples and trusted references.">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/styles.css">
+<style>
+.reference-hero{padding:65px 0 38px}.reference-hero h1{font:700 clamp(38px,5.4vw,65px)/1.12 'Space Grotesk',sans-serif;letter-spacing:-.05em;margin:14px 0}.reference-hero p{max-width:730px;color:var(--muted)}
+.reference-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:36px;padding:16px 0 85px}
+.quick-nav{position:sticky;top:112px;align-self:start;border:1px solid var(--line);border-radius:13px;padding:16px;background:var(--surface)}
+.quick-nav strong{display:block;margin-bottom:12px;font-size:12px;letter-spacing:.09em;color:var(--faint);text-transform:uppercase}
+.quick-nav a{display:block;padding:8px 10px;border-radius:7px;font-size:13px;color:var(--muted)}.quick-nav a:hover,.quick-nav a:focus-visible{background:var(--surface2);color:var(--mint)}
+.quick-main{min-width:0}.quick-search{display:block;width:100%;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:13px 15px;margin-bottom:22px}
+.quick-section{scroll-margin-top:105px;margin:0 0 38px}.quick-section>h2{font:700 27px/1.2 'Space Grotesk';letter-spacing:-.035em;margin-bottom:7px}.quick-section>p{color:var(--muted);font-size:14px}
+.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.reminder{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:21px;min-width:0}
+.reminder h3{font:600 18px/1.3 'Space Grotesk';margin:0 0 10px}.reminder p,.reminder li{font-size:13px;line-height:1.7;color:var(--muted)}.reminder ul,.reminder ol{padding-left:20px;margin:10px 0}
+.reminder code,.reminder pre{font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace}.reminder code{color:var(--ink)}.reminder pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:12px;border:1px solid var(--line);background:var(--bg);border-radius:8px;color:var(--ink)}
+.reminder .formula{display:block;padding:12px;background:var(--bg);border-radius:8px;font:500 14px/1.6 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+.reminder .source{border-top:1px solid var(--line);margin-top:14px;padding-top:11px;font-size:12px}.source a{color:var(--mint);text-decoration:underline;text-underline-offset:3px}.reminder strong{color:var(--ink)}
+.quick-note{font-size:13px;color:var(--faint);margin-bottom:22px}.quick-empty{border:1px dashed var(--line);border-radius:12px;padding:25px;color:var(--muted)}
+@media(max-width:900px){.reference-layout{grid-template-columns:1fr}.quick-nav{position:static;display:flex;flex-wrap:wrap;gap:4px}.quick-nav strong{width:100%}.quick-nav a{padding:6px 9px}}
+@media(max-width:650px){.quick-grid{grid-template-columns:1fr}.reference-hero{padding:45px 0 25px}.reference-layout{padding-bottom:50px}.reminder{padding:17px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container nav-row">
+<a class="brand" href="./" aria-label="Learning Lab home"><span class="brand-mark">RH<span>.</span></span><span class="brand-label"><strong>LEARNING LAB</strong><small>RHHanson / UMD</small></span></a>
+<nav class="site-nav" aria-label="Primary"><a href="./">Home</a><a href="./#resources">Toolbox</a><a href="#main">Quick reference</a></nav>
+<div class="nav-actions"><button class="theme-button" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true"><span class="theme-symbol" aria-hidden="true">&#9790;</span><span class="theme-label">Dark</span></button></div>
+</div></header>
+<main id="main" class="container">
+<section class="reference-hero"><div class="section-label">SHARED TOOLBOX / FIELD NOTES</div><h1>Forgot how?<br><em style="font-style:normal;color:var(--mint)">Start here.</em></h1><p>A practical recall guide for techniques that are easy to forget between courses. Each reminder includes the key procedure, a small check or example, and a route back to a fuller reference.</p></section>
+<div class="reference-layout">
+<nav class="quick-nav" aria-label="Quick reference topics"><strong>Jump to</strong><a href="#math">Math basics</a><a href="#linear">Linear algebra</a><a href="#probability">Probability &amp; signals</a><a href="#code">Programming</a><a href="#ml">Machine learning</a><a href="#writing">Research &amp; writing</a><a href="./#resources">All toolbox links ↗</a></nav>
+<div class="quick-main">
+<label for="quick-search" class="sr-only">Search quick reminders</label><input class="quick-search" id="quick-search" type="search" placeholder="Find a reminder: chain rule, eigenvector, git, Bayes..." autocomplete="off">
+<p class="quick-note" id="quick-count" aria-live="polite">Search by topic, technique, or keyword. Examples here are original, not excerpts from the linked resources.</p>
+<section class="quick-section" id="math"><h2>Math basics</h2><p>Fast checks for algebra and calculus manipulations.</p><div class="quick-grid">
+<article class="reminder" data-keywords="derivative chain rule product quotient calculus"><h3>Differentiate a composition</h3><p><strong>Chain rule:</strong> differentiate the outside, keep the inside, then multiply by the derivative of the inside.</p><span class="formula">d/dx f(g(x)) = f'(g(x)) g'(x)</span><p>Check: d/dx (3x² + 1)⁴ = 24x(3x² + 1)³. The missing <code>6x</code> is a classic mistake.</p><div class="source">Refresh: <a href="https://tutorial.math.lamar.edu/" target="_blank" rel="noopener noreferrer">Paul's Online Math Notes</a></div></article>
+<article class="reminder" data-keywords="integration substitution u sub integrals"><h3>Use substitution in an integral</h3><ol><li>Look for an inner expression and its derivative.</li><li>Set <code>u = g(x)</code> and replace <code>du = g'(x)dx</code>.</li><li>Integrate in <code>u</code>; substitute back (or change definite bounds).</li></ol><span class="formula">∫ 2x cos(x²) dx = sin(x²) + C</span><div class="source">Refresh: <a href="https://www.math.umd.edu/~immortal/" target="_blank" rel="noopener noreferrer">UMD mathematics notes</a></div></article>
+<article class="reminder" data-keywords="algebra fractions equations denominator zero"><h3>Rearrange equations safely</h3><p>Write down where denominators are zero <strong>before</strong> multiplying through; squaring both sides can introduce extraneous solutions.</p><span class="formula">(x² − 1)/(x − 1) = x + 1, but x ≠ 1</span><p>Always substitute candidate answers into the <em>original</em> expression.</p><div class="source">Refresh: <a href="https://math.vanderbilt.edu/schectex/commerrs/" target="_blank" rel="noopener noreferrer">Common Errors in Undergraduate Mathematics</a></div></article>
+<article class="reminder" data-keywords="sequences patterns oeis recurrence"><h3>Recognize a sequence</h3><p>Try first differences, second differences, ratios, and simple recurrences before guessing a formula. A finite sample never uniquely identifies a sequence.</p><span class="formula">2, 5, 10, 17 → differences 3, 5, 7</span><p>The rule <code>a(n) = n² + 1</code> fits for n = 1, 2, 3, 4, but other rules fit too.</p><div class="source">Explore: <a href="https://oeis.org/wiki/Main_Page" target="_blank" rel="noopener noreferrer">OEIS</a></div></article>
+</div></section>
+<section class="quick-section" id="linear"><h2>Linear algebra</h2><p>Operations that reappear in engineering, optimization, and ML.</p><div class="quick-grid">
+<article class="reminder" data-keywords="matrix multiplication dimensions dot product"><h3>Check matrix dimensions</h3><p>If <code>A</code> is m × n and <code>B</code> is n × p, then <code>AB</code> is m × p. The inner dimensions must agree.</p><span class="formula">A (2×3) · B (3×4) → AB (2×4)</span><p>Matrix multiplication generally does <strong>not</strong> commute: <code>AB ≠ BA</code>.</p><div class="source">Refresh: <a href="https://www.math.umd.edu/~immortal/" target="_blank" rel="noopener noreferrer">UMD mathematics notes</a></div></article>
+<article class="reminder" data-keywords="eigenvalue eigenvector characteristic polynomial"><h3>Find eigenvalues and eigenvectors</h3><ol><li>Solve <code>det(A − λI) = 0</code> for eigenvalues λ.</li><li>For each λ, solve <code>(A − λI)v = 0</code>.</li><li>Check <code>Av = λv</code> and <code>v ≠ 0</code>.</li></ol><p>For a diagonal matrix diag(2, 3), the coordinate axes are eigenvectors with eigenvalues 2 and 3.</p><div class="source">Refresh: <a href="https://wmboyles.net/projects/mathsummaries" target="_blank" rel="noopener noreferrer">Math Summaries</a></div></article>
+</div></section>
+<section class="quick-section" id="probability"><h2>Probability &amp; signals</h2><p>General prerequisite reminders; course-specific conventions belong on the course sites.</p><div class="quick-grid">
+<article class="reminder" data-keywords="bayes conditional probability independence events"><h3>Use Bayes' rule</h3><span class="formula">P(A|B) = P(B|A) P(A) / P(B)</span><p>First identify the conditioning event and confirm <code>P(B) &gt; 0</code>. Don't interchange <code>P(A|B)</code> and <code>P(B|A)</code>.</p><p>Example: 1% prevalence, 90% sensitivity, 10% false-positive rate gives 0.009/(0.009 + 0.099) ≈ <strong>8.33%</strong> probability after a positive result.</p><div class="source">Related foundations: <a href="https://tutorial.math.lamar.edu/" target="_blank" rel="noopener noreferrer">Paul's Online Math Notes</a> (math refresher)</div></article>
+<article class="reminder" data-keywords="sampling aliasing nyquist frequency fft dtft"><h3>Check sampling before interpreting a spectrum</h3><p>For a bandlimited continuous-time signal with highest frequency <code>fmax</code>, ideal reconstruction requires a sampling rate <code>fs &gt; 2fmax</code> (with suitable assumptions).</p><span class="formula">f = 700 Hz, fs = 1 kHz → alias at 300 Hz</span><p>Label whether the horizontal axis is Hz, rad/s, or rad/sample. A sampled spectrum is periodic in frequency.</p><div class="source">Go deeper: <a href="https://rhhanson-umd.github.io/ENEE-630/">ENEE 630 course site</a></div></article>
+</div></section>
+<section class="quick-section" id="code"><h2>Programming</h2><p>Small commands and habits worth keeping at hand.</p><div class="quick-grid">
+<article class="reminder" data-keywords="python virtual environment pip venv install"><h3>Create a Python virtual environment</h3><pre><code>python -m venv .venv
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+# Linux/macOS
+source .venv/bin/activate
+python -m pip install PACKAGE</code></pre><p>Use <code>python -m pip</code> so package installation targets the Python interpreter you intended.</p><div class="source">Refresh: <a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer">W3Schools Python</a></div></article>
+<article class="reminder" data-keywords="git commands status branch commit pull request github"><h3>Remember the everyday Git loop</h3><pre><code>git status
+git switch -c feature/my-change
+git add path/to/file
+git commit -m "Describe the change"
+git push -u origin feature/my-change</code></pre><p>Review the diff before committing. Open a pull request rather than pushing unreviewed changes directly to the default branch.</p><div class="source">Example codebase: <a href="https://github.com/cockroachdb/cockroach" target="_blank" rel="noopener noreferrer">CockroachDB on GitHub</a></div></article>
+<article class="reminder" data-keywords="python iteration enumerate zip list comprehension"><h3>Iterate with indices or pairs</h3><pre><code>for i, value in enumerate(values):
+    print(i, value)
+
+for x, y in zip(xs, ys):
+    print(x, y)</code></pre><p><code>enumerate</code> gives (index, value); <code>zip</code> pairs iterables and stops at the shortest by default.</p><div class="source">Refresh: <a href="https://www.w3schools.com/python/" target="_blank" rel="noopener noreferrer">W3Schools Python</a></div></article>
+<article class="reminder" data-keywords="c++ vector const reference cppreference"><h3>Pass C++ containers without copies</h3><pre><code>void inspect(const std::vector&lt;int&gt;&amp; values) {
+    for (int value : values) {
+        // inspect value
+    }
+}</code></pre><p><code>const &amp;</code> avoids a container copy and prevents modification through that reference. Include <code>&lt;vector&gt;</code>.</p><div class="source">Language details: <a href="https://en.cppreference.com/" target="_blank" rel="noopener noreferrer">cppreference</a></div></article>
+</div></section>
+<section class="quick-section" id="ml"><h2>Machine learning</h2><p>Useful checks before trusting a model or its evaluation.</p><div class="quick-grid">
+<article class="reminder" data-keywords="gradient descent learning rate optimization loss"><h3>Recall gradient descent</h3><span class="formula">θ(next) = θ(now) − η ∇L(θ(now))</span><p><code>η</code> is the learning rate. Too large can cause divergence; too small can stall progress. Check whether the loss goes down on a simple known example.</p><div class="source">Refresh: <a href="https://d2l.ai/" target="_blank" rel="noopener noreferrer">Dive into Deep Learning</a></div></article>
+<article class="reminder" data-keywords="train validation test split data leakage"><h3>Avoid data leakage</h3><ol><li>Split training, validation, and test data appropriately.</li><li>Fit preprocessing steps on training data only.</li><li>Use validation data for selection; evaluate the final model on held-out test data.</li></ol><p>For time series, respect chronology; for grouped observations, avoid allowing the same group into both training and test sets.</p><div class="source">Refresh: <a href="https://d2l.ai/" target="_blank" rel="noopener noreferrer">Dive into Deep Learning</a></div></article>
+</div></section>
+<section class="quick-section" id="writing"><h2>Research &amp; writing</h2><p>Find sources and turn them into defensible, traceable explanations.</p><div class="quick-grid">
+<article class="reminder" data-keywords="citation references apa book author date doi"><h3>Build a reliable citation</h3><p>Record author, year, exact title, publisher or journal, and DOI/URL when applicable <strong>while reading</strong>. Then format according to the required citation style and verify it against the original source.</p><p>A generator is a starting point, not an authority; check capitalization, editions, page ranges, and missing metadata.</p><div class="source">Tool: <a href="https://www.citationmachine.net/apa/cite-a-book" target="_blank" rel="noopener noreferrer">Citation Machine (APA book)</a></div></article>
+<article class="reminder" data-keywords="research ai university academic integrity policy"><h3>Check AI and source-use rules</h3><p>Before using AI tools for coursework, read the applicable course and university policies. Keep confidential materials private, cite verifiable claims, and distinguish your analysis from generated suggestions.</p><div class="source">UMD links: <a href="https://ai-resources.umd.edu/services.html" target="_blank" rel="noopener noreferrer">AI services</a> · <a href="https://ai.umd.edu/" target="_blank" rel="noopener noreferrer">AI at UMD</a></div></article>
+<article class="reminder" data-keywords="quaternion rotation 3d visualization geometry"><h3>Rebuild intuition for 3D rotations</h3><p>Quaternions compactly describe spatial rotations. Keep component order and coordinate conventions explicit; when using a unit quaternion, its inverse is its conjugate.</p><p>A rotation demonstration helps distinguish changing a vector's coordinates from rotating the physical vector.</p><div class="source">Explore: <a href="https://eater.net/quaternions" target="_blank" rel="noopener noreferrer">Visualizing Quaternions</a></div></article>
+</div></section>
+<p class="quick-empty" id="no-results" hidden>No reminders matched. Try a broader term or browse the full <a href="./#resources" style="color:var(--mint)">shared toolbox</a>.</p>
+<p class="quick-note">These independent reminders are intentionally compact. Follow the linked resources for full definitions, proofs, exceptions, and examples. This is an independent learning resource, not an official UMD site.</p>
+</div></div>
+</main>
+<footer><div class="container footer-row"><div class="footer-brand"><span class="brand-mark">RH<span>.</span></span><span>Independent educational project.<br>Not an official University of Maryland website.</span></div><div class="footer-links"><a href="./">Home</a><a href="./#resources">Toolbox</a><a href="https://github.com/RHHanson-UMD" target="_blank" rel="noopener noreferrer">GitHub</a></div></div></footer>
+<script>
+'use strict';
+const root=document.documentElement, toggle=document.getElementById('theme-toggle');
+let saved=null;try{saved=localStorage.getItem('learning-lab-theme')}catch{}
+root.dataset.theme=saved==='light'?'light':'dark';
+function updateTheme(){const dark=root.dataset.theme==='dark';toggle.querySelector('.theme-symbol').textContent=dark?'☾':'☀';toggle.querySelector('.theme-label').textContent=dark?'Dark':'Light';toggle.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');toggle.setAttribute('aria-pressed',String(dark))}
+updateTheme();
+toggle.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('learning-lab-theme',root.dataset.theme)}catch{}updateTheme()});
+const search=document.getElementById('quick-search'),sections=[...document.querySelectorAll('.quick-section')],cards=[...document.querySelectorAll('.reminder')],count=document.getElementById('quick-count'),empty=document.getElementById('no-results');
+function filter(){const q=search.value.trim().toLocaleLowerCase();let n=0;cards.forEach(card=>{const match=!q||(card.textContent+' '+card.dataset.keywords).toLocaleLowerCase().includes(q);card.hidden=!match;if(match)n++});sections.forEach(section=>{section.hidden=![...section.querySelectorAll('.reminder')].some(card=>!card.hidden)});empty.hidden=n!==0;count.textContent=n+' reminder'+(n===1?'':'s')+' shown.'}
+search.addEventListener('input',filter);filter();
+</script>
+</body></html>
