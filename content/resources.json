@@ -1,0 +1,189 @@
+{
+  "categories": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics & problem solving",
+      "description": "Reference notes, identities, techniques, and useful mathematical patterns.",
+      "code": "01"
+    },
+    {
+      "id": "visualization",
+      "name": "Interactive mathematics",
+      "description": "See abstract concepts respond to direct manipulation.",
+      "code": "02"
+    },
+    {
+      "id": "programming",
+      "name": "Programming & software systems",
+      "description": "Language references, tutorials, and real-world codebases.",
+      "code": "03"
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine learning",
+      "description": "From the mathematics to implementations of learning systems.",
+      "code": "04"
+    },
+    {
+      "id": "umd",
+      "name": "UMD AI & university resources",
+      "description": "University research, services, and campus guidance.",
+      "code": "05"
+    },
+    {
+      "id": "writing",
+      "name": "Academic writing & citations",
+      "description": "Documentation and citation tools for research and coursework.",
+      "code": "06"
+    }
+  ],
+  "resources": [
+    {
+      "name": "Paul's Online Math Notes",
+      "url": "https://tutorial.math.lamar.edu/",
+      "category": "mathematics",
+      "desc": "Worked explanations in algebra, calculus, and differential equations.",
+      "tags": [
+        "calculus",
+        "algebra",
+        "differential equations"
+      ]
+    },
+    {
+      "name": "Math Summaries by William Boyles",
+      "url": "https://wmboyles.net/projects/mathsummaries",
+      "category": "mathematics",
+      "desc": "Concise illustrated math notes, proofs, and review material.",
+      "tags": [
+        "calculus",
+        "reference",
+        "study notes"
+      ]
+    },
+    {
+      "name": "Common Errors in Undergraduate Mathematics",
+      "url": "https://math.vanderbilt.edu/schectex/commerrs/",
+      "category": "mathematics",
+      "desc": "A practical guide to common mistakes in notation, algebra, and reasoning.",
+      "tags": [
+        "mistakes",
+        "proofs",
+        "notation"
+      ]
+    },
+    {
+      "name": "The On-Line Encyclopedia of Integer Sequences",
+      "url": "https://oeis.org/wiki/Main_Page",
+      "category": "mathematics",
+      "desc": "Search, identify, and investigate mathematical integer sequences.",
+      "tags": [
+        "OEIS",
+        "sequences",
+        "combinatorics"
+      ]
+    },
+    {
+      "name": "UMD Mathematics Course Notes",
+      "url": "https://www.math.umd.edu/~immortal/",
+      "category": "mathematics",
+      "desc": "Justin Wyss-Gallifent's notes on calculus, proofs, linear algebra, and more.",
+      "tags": [
+        "UMD",
+        "linear algebra",
+        "proofs",
+        "calculus"
+      ]
+    },
+    {
+      "name": "Visualizing Quaternions",
+      "url": "https://eater.net/quaternions",
+      "category": "visualization",
+      "desc": "Ben Eater's interactive explanation of quaternion rotations.",
+      "tags": [
+        "quaternions",
+        "geometry",
+        "rotations",
+        "interactive"
+      ]
+    },
+    {
+      "name": "cppreference",
+      "url": "https://en.cppreference.com/",
+      "category": "programming",
+      "desc": "Detailed C and C++ language and standard library reference.",
+      "tags": [
+        "C++",
+        "C",
+        "reference"
+      ]
+    },
+    {
+      "name": "W3Schools Python Tutorial",
+      "url": "https://www.w3schools.com/python/",
+      "category": "programming",
+      "desc": "Introductory Python lessons and runnable examples.",
+      "tags": [
+        "python",
+        "tutorial",
+        "programming"
+      ]
+    },
+    {
+      "name": "CockroachDB Source Code",
+      "url": "https://github.com/cockroachdb/cockroach",
+      "category": "programming",
+      "desc": "Explore an open-source distributed SQL database codebase.",
+      "tags": [
+        "GitHub",
+        "database",
+        "distributed systems",
+        "Go"
+      ]
+    },
+    {
+      "name": "Dive into Deep Learning",
+      "url": "https://d2l.ai/",
+      "category": "machine-learning",
+      "desc": "Interactive deep learning textbook with mathematical explanations and code.",
+      "tags": [
+        "machine learning",
+        "neural networks",
+        "PyTorch"
+      ]
+    },
+    {
+      "name": "UMD AI Services",
+      "url": "https://ai-resources.umd.edu/services.html",
+      "category": "umd",
+      "desc": "University AI tools, access guidance, and responsible-use information.",
+      "tags": [
+        "UMD",
+        "AI tools",
+        "university services"
+      ]
+    },
+    {
+      "name": "AI at UMD",
+      "url": "https://ai.umd.edu/",
+      "category": "umd",
+      "desc": "UMD artificial intelligence research, academic programs, and initiatives.",
+      "tags": [
+        "UMD",
+        "AI research",
+        "academics"
+      ]
+    },
+    {
+      "name": "Citation Machine: APA Book Citation",
+      "url": "https://www.citationmachine.net/apa/cite-a-book",
+      "category": "writing",
+      "desc": "Create and review APA-format citations for books.",
+      "tags": [
+        "APA",
+        "citations",
+        "writing",
+        "references"
+      ]
+    }
+  ]
+}

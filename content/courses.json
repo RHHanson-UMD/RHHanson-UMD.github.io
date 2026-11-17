@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ENEE-620",
+    "name": "Random Processes in Communication and Control",
+    "description": "Explore random processes, correlation, spectra, and estimation through interactive reasoning.",
+    "features": [
+      "Probability",
+      "Random processes",
+      "Estimation"
+    ],
+    "class": "amber"
+  },
+  {
+    "id": "ENEE-630",
+    "name": "Advanced Digital Signal Processing",
+    "description": "Make transforms, filtering, prediction, and frequency-domain ideas easier to see.",
+    "features": [
+      "Signals",
+      "Transforms",
+      "Spectral analysis"
+    ],
+    "class": "violet"
+  },
+  {
+    "id": "ENEE-641",
+    "name": "Mathematical Foundations for Computer Engineering",
+    "description": "Explore proof strategies, graphs, algorithms, reductions, and complexity.",
+    "features": [
+      "Graph theory",
+      "Algorithms",
+      "NP-completeness"
+    ],
+    "class": "mint"
+  }
+]
