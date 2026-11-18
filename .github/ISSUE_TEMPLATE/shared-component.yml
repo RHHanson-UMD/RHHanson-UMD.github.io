@@ -1,0 +1,46 @@
+name: "Shared engine or UI request"
+description: "Request a reusable component without coupling course repositories."
+title: "[Shared] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is for shared components and coordination only. Keep actual course content, private teaching materials, and course-specific code in the relevant course repository.
+  - type: input
+    id: consumer
+    attributes:
+      label: "Requesting course or site"
+      description: "Name the consuming repo and link the course-owned issue, if any."
+      placeholder: "RHHanson-UMD/ENEE-620 #..."
+    validations:
+      required: true
+  - type: dropdown
+    id: location
+    attributes:
+      label: "Proposed home"
+      options:
+        - "learning-core — pure math/algorithms"
+        - "course-template — optional UI pattern"
+        - "Main portal — cross-discipline resource"
+        - "Not sure — need an ownership decision"
+    validations:
+      required: true
+  - type: textarea
+    id: specification
+    attributes:
+      label: "Behavior and input/output contract"
+      description: "Describe units, conventions, assumptions, expected behavior, and what must remain independent."
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: "Independent expected outcomes"
+      description: "Provide at least one correct case, one incorrect/counterexample case and a boundary case where relevant."
+    validations:
+      required: true
+  - type: textarea
+    id: adoption
+    attributes:
+      label: "Adoption and publication constraints"
+      description: "Note expected consuming repo, pinning strategy, attribution concerns and any required source verification. Never paste restricted source text."

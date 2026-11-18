@@ -1,5 +1,15 @@
 # Learning Lab shared-infrastructure launch status
 
+## 2026-11-18 shared launch cycle
+
+- Reviewed current open shared issues and PRs in the portal, `learning-core`, and `course-template`. Course repos remain separately owned and were not edited.
+- [learning-core PR #2](https://github.com/RHHanson-UMD/learning-core/pull/2) was squash-merged as `def3367502914655f01edd953495f3bf7b8b5790`. It adds independent truth-table/clique regression tests, `AGENTS.md`, and pinned vendoring policy `docs/VERSIONING.md`. GitHub Actions **Tests** PR run `44263398455` completed successfully. No shared release tag or consuming-course migration yet.
+- [portal PR #11](https://github.com/RHHanson-UMD/RHHanson-UMD.github.io/pull/11) was squash-merged as `1e272df56553a837009fee89c57c2f232b0ea711`. It adds `scripts/verify_site.py` and an independent static Pages verification workflow. GitHub Actions PR run `44263820317` passed all build, local-link, dark-default, metadata and generated-diff checks.
+- [portal PR #12](https://github.com/RHHanson-UMD/RHHanson-UMD.github.io/pull/12) adds public-safe issue forms for bugs, shared components and educational resources, without changing course repositories.
+- **Not verified**: live Pages page and Quick Reference, Pages Settings source, latest push-triggered deploy run, browser/mobile/keyboard behavior, or template-repository Settings. The available public-web reads could not retrieve the site or deployment. A passing static CI workflow is not deployment proof.
+- **Cover art** for ENEE-620/630/641 remains proposed under [portal issue #9](https://github.com/RHHanson-UMD/RHHanson-UMD.github.io/issues/9); no image binaries were committed pending publication rights and correctness review.
+- Next: verify public Pages/Actions, confirm template Settings, then review the still-open release tag and ENEE-641 compatibility tasks in [learning-core issue #1](https://github.com/RHHanson-UMD/learning-core/issues/1). Keep the high-frequency launch automation enabled until real deployment and launch acceptance are confirmed.
+
 Last edited: **2026-11-17**. This is a dated coordination snapshot, **not** a live health dashboard. Read GitHub repositories, issues, PRs, Actions and Pages again before acting.
 
 ## Ownership

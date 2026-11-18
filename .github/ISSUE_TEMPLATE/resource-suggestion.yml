@@ -1,0 +1,37 @@
+name: "Suggest an educational resource"
+description: "Propose a high-value public reference for the shared toolbox."
+title: "[Resource] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest a link to the original source, not an upload of copyrighted content. Availability on the web does not mean that redistribution or adaptation is authorized.
+  - type: input
+    id: title
+    attributes:
+      label: "Resource name"
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: "Direct public URL"
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: "What it helps students learn"
+      description: "Explain specific topics, usefulness and intended toolbox category."
+    validations:
+      required: true
+  - type: textarea
+    id: rights
+    attributes:
+      label: "Availability, attribution, and license (if known)"
+      description: "Specify free-to-view versus openly licensed only when verified; otherwise say unknown."
+  - type: textarea
+    id: caveats
+    attributes:
+      label: "Link health or other caveats (optional)"
