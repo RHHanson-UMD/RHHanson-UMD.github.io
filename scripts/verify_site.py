@@ -59,7 +59,7 @@ def check_page(filename):
     page = SITE / filename
     require(page.is_file(), f"Missing public page: {filename}")
     html = page.read_text(encoding="utf-8")
-    require(re.search(r'<html\\b[^>]*\\bdata-theme="dark"', html),
+    require(re.search(r'<html\b[^>]*\bdata-theme="dark"', html),
             f"{filename}: missing dark-first HTML default")
     require('id="theme-toggle"' in html, f"{filename}: missing theme toggle")
     require('href="./assets/styles.css"' in html,
