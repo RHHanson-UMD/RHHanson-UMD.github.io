@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Learning Lab public-safe source metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "course",
+    "classification",
+    "verification",
+    "access",
+    "redistribution",
+    "public_metadata_approved"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "course": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tier",
+        "subtype",
+        "status",
+        "method",
+        "evidence",
+        "requires_clarification"
+      ],
+      "properties": {
+        "tier": {
+          "enum": [
+            "primary",
+            "secondary",
+            "tertiary",
+            "unknown"
+          ]
+        },
+        "subtype": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "provisional",
+            "confirmed",
+            "needs_clarification"
+          ]
+        },
+        "method": {
+          "enum": [
+            "automatic",
+            "human",
+            "unknown"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20
+        },
+        "requires_clarification": {
+          "type": "boolean"
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "unverified",
+            "cross_checked",
+            "verified",
+            "disputed",
+            "corrected"
+          ]
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "related_source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "access": {
+      "enum": [
+        "restricted",
+        "public"
+      ]
+    },
+    "redistribution": {
+      "enum": [
+        "not_authorized",
+        "authorized",
+        "unknown"
+      ]
+    },
+    "public_metadata_approved": {
+      "type": "boolean"
+    },
+    "derived_from": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "course_role": {
+      "enum": [
+        "assigned_reference",
+        "required_material",
+        "supplemental_evidence",
+        "unspecified"
+      ]
+    }
+  }
+}
