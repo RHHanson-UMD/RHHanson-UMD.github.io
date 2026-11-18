@@ -1,0 +1,24 @@
+{
+  "id": "example-lecture-transcript",
+  "course": "COURSE-XXX",
+  "classification": {
+    "tier": "secondary",
+    "subtype": "lecture_transcript",
+    "status": "provisional",
+    "method": "automatic",
+    "evidence": [
+      "Speaker turns detected; original author and recording not yet verified"
+    ],
+    "requires_clarification": false
+  },
+  "verification": {
+    "status": "unverified",
+    "method": null,
+    "related_source_ids": []
+  },
+  "access": "restricted",
+  "redistribution": "not_authorized",
+  "public_metadata_approved": false,
+  "derived_from": [],
+  "course_role": "supplemental_evidence"
+}
