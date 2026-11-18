@@ -45,3 +45,11 @@ The portal deploys from `site/` using `.github/workflows/deploy.yml` and GitHub 
 ## Changes, coordination and reporting
 
 Prefer small feature branches and reviewable PRs with linked issues. Check existing issues/PRs before starting to avoid duplicate work. Report sources actually opened, exact paths changed, tests *actually* executed, PR/commit, Pages status/live URL, restrictions/risks and a concrete next step. Keep a non-sensitive update in a relevant issue or `docs/maintenance/STATUS.md` for continuity between automation runs and course chats. Do not report unperformed tests or deployments as successful.
+
+## Repository-specific acceptance checks (tracked in #14)
+
+1. For every change to generated home content, edit the appropriate JSON input, run `python3 scripts/build.py`, then `python3 scripts/verify_site.py`, and verify `git diff --exit-code -- site/index.html` succeeds after the generated page is committed. Do not hand-edit generated course/resource blocks.
+2. Run the Python live-Pages tests separately when the verifier or deployment workflow changes; verify the public root page and `/quick-reference.html` after a deployment. Network access or green CI must not be mistaken for actual browser verification.
+3. Keep course-specific coverage, syllabus interpretation, figures and homework out of this portal's general knowledge map unless independently vetted as general education; file course-specific follow-ups in the course-owned repository.
+4. Treat cover artwork and other third-party imagery as publication-gated: confirm creation/redistribution rights and inspect visible mathematics before committing binaries. Do not embed private source URLs in issue bodies.
+5. For cross-repository maintenance, record explicit issue/PR handoffs and respect each course repo's own AGENTS.md. The main portal is the coordination point, not a mandate to edit every course simultaneously.
