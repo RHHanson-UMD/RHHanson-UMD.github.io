@@ -1,0 +1,46 @@
+name: "Bug or deployment problem"
+description: "Report an issue with the Learning Lab portal, shared navigation, or Pages publishing."
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for the portal or shared infrastructure only. Course-specific bugs belong in the relevant ENEE course repository. Never include credentials, private lecture files, homework answers or student information.
+  - type: input
+    id: affected_url
+    attributes:
+      label: "Public URL or repository path"
+      placeholder: "https://rhhanson-umd.github.io/ or site/..."
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Area"
+      options:
+        - "Portal navigation and content"
+        - "Quick Reference"
+        - "GitHub Pages / Actions"
+        - "Accessibility / mobile / theme"
+        - "learning-core or course-template coordination"
+        - "Other shared infrastructure"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "Steps to reproduce and observed result"
+      placeholder: "Describe what happened and the steps leading to it."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected result"
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: "Checks already performed (optional)"
+      description: "Include relevant browser/device and public Actions run URL. Do not paste private logs or credentials."
